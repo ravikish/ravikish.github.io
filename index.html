@@ -21,14 +21,14 @@
          display: flex;
          flex-direction: row;
          justify-content: flex-start;
-         align-items: center; /* Align items vertically center */
+         align-items: center;
          position: relative;
          }
          .left-section {
-         max-width: 70%; /* Slightly reduce the width */
+         max-width: 70%;
          }
          .right-section {
-         max-width: 25%; /* Slightly reduce the width */
+         max-width: 25%;
          text-align: center;
          position: relative;
          }
@@ -45,10 +45,10 @@
          text-decoration: underline;
          }
          .profile-pic {
-         max-width: 180px;
-         border-radius: 30%;
+         max-width: 150px;
+         border-radius: 50%;
          margin-top: 20px;
-         margin-left: 180px; /* Add margin to create space between the photo and text */
+         margin-left: 20px;
          position: relative;
          }
          .open-to-work {
@@ -154,6 +154,58 @@
          .nav a:hover {
          background-color: #00bcd4;
          color: #ffffff;
+         }
+         /* Back to Top Button */
+         #back-to-top {
+         display: none;
+         position: fixed;
+         bottom: 30px;
+         right: 30px;
+         background-color: #00bcd4;
+         color: white;
+         padding: 10px 15px;
+         border-radius: 50%;
+         font-size: 18px;
+         border: none;
+         cursor: pointer;
+         z-index: 1000;
+         transition: background-color 0.3s ease-in-out;
+         }
+         #back-to-top:hover {
+         background-color: #00796b;
+         }
+         /* Responsive Design */
+         @media screen and (max-width: 768px) {
+         .container {
+         width: 95%;
+         flex-direction: column;
+         align-items: center;
+         }
+         .left-section, .right-section {
+         max-width: 100%;
+         text-align: center;
+         }
+         .profile-pic {
+         max-width: 120px;
+         margin-left: 0;
+         margin-top: 10px;
+         }
+         h1 {
+         font-size: 24px;
+         }
+         h2 {
+         font-size: 20px;
+         }
+         .nav {
+         flex-direction: column;
+         align-items: center;
+         }
+         .nav a {
+         padding: 10px 0;
+         width: 100%;
+         text-align: center;
+         border-bottom: 1px solid #00bcd4;
+         }
          }
       </style>
    </head>
@@ -281,9 +333,25 @@
             </div>
          </div>
       </div>
+      <button id="back-to-top" onclick="scrollToTop()">↑</button>
       <script>
          function toggleTheme() {
              document.body.classList.toggle('light-theme');
+         }
+         
+         // Back to Top Button
+         var backToTopButton = document.getElementById("back-to-top");
+         
+         window.onscroll = function() {
+             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                 backToTopButton.style.display = "block";
+             } else {
+                 backToTopButton.style.display = "none";
+             }
+         };
+         
+         function scrollToTop() {
+             window.scrollTo({top: 0, behavior: 'smooth'});
          }
       </script>
    </body>
