@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ravikishore M - Senior Java Developer</title>
+      <style>
+         body {
+         margin: 0;
+         padding: 0;
+         font-family: Arial, sans-serif;
+         line-height: 1.6;
+         background-color: #1e1e1e;
+         color: #ffffff;
+         transition: all 0.3s ease-in-out;
+         }
+         .container {
+         width: 80%;
+         margin: auto;
+         padding: 20px;
+         display: flex;
+         flex-direction: row;
+         justify-content: flex-start;
+         align-items: center; /* Align items vertically center */
+         position: relative;
+         }
+         .left-section {
+         max-width: 70%; /* Slightly reduce the width */
+         }
+         .right-section {
+         max-width: 25%; /* Slightly reduce the width */
+         text-align: center;
+         position: relative;
+         }
+         h1, h2 {
+         color: #00bcd4;
+         margin: 0;
+         }
+         .contact-info p, .contact-info a {
+         margin: 5px 0;
+         color: #ffffff;
+         text-decoration: none;
+         }
+         .contact-info a:hover {
+         text-decoration: underline;
+         }
+         .profile-pic {
+         max-width: 180px;
+         border-radius: 30%;
+         margin-top: 20px;
+         margin-left: 180px; /* Add margin to create space between the photo and text */
+         position: relative;
+         }
+         .open-to-work {
+         background-color: #28a745;
+         color: white;
+         font-size: 14px;
+         font-weight: bold;
+         padding: 5px 10px;
+         border-radius: 20px;
+         position: absolute;
+         top: -10px;
+         right: -10px;
+         transform: rotate(-15deg);
+         z-index: 10;
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+         }
+         .section {
+         margin-top: 40px;
+         }
+         .section h2 {
+         border-bottom: 2px solid #00bcd4;
+         padding-bottom: 10px;
+         margin-bottom: 20px;
+         }
+         .toggle-switch {
+         position: relative;
+         display: inline-block;
+         width: 60px;
+         height: 34px;
+         }
+         .toggle-switch input {
+         opacity: 0;
+         width: 0;
+         height: 0;
+         }
+         .slider {
+         position: absolute;
+         cursor: pointer;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background-color: #ccc;
+         transition: .4s;
+         border-radius: 34px;
+         }
+         .slider:before {
+         position: absolute;
+         content: "";
+         height: 26px;
+         width: 26px;
+         left: 4px;
+         bottom: 4px;
+         background-color: white;
+         transition: .4s;
+         border-radius: 50%;
+         }
+         input:checked + .slider {
+         background-color: #00bcd4;
+         }
+         input:checked + .slider:before {
+         transform: translateX(26px);
+         }
+         .light-theme {
+         background-color: #ffffff;
+         color: #000000;
+         }
+         .light-theme h1, .light-theme h2 {
+         color: #00796b;
+         }
+         .light-theme .contact-info p, .light-theme .contact-info a {
+         color: #000000;
+         }
+         .light-theme .section h2 {
+         border-bottom: 2px solid #00796b;
+         }
+         .print-button {
+         cursor: pointer;
+         padding: 5px 10px;
+         background-color: #00bcd4;
+         color: #ffffff;
+         border: none;
+         border-radius: 5px;
+         transition: background-color 0.3s ease-in-out;
+         margin-right: 20px;
+         }
+         .print-button:hover {
+         background-color: #00796b;
+         }
+         .nav {
+         margin-top: 20px;
+         display: flex;
+         gap: 10px;
+         }
+         .nav a {
+         text-decoration: none;
+         color: #00bcd4;
+         padding: 5px 10px;
+         border: 1px solid #00bcd4;
+         border-radius: 5px;
+         transition: background-color 0.3s ease-in-out;
+         }
+         .nav a:hover {
+         background-color: #00bcd4;
+         color: #ffffff;
+         }
+      </style>
+   </head>
+   <body>
+      <div style="margin: 20px 20px;">
+         <button class="print-button" onclick="window.print()">Print / Export as PDF</button>
+         <label class="toggle-switch">
+         <input type="checkbox" onclick="toggleTheme()">
+         <span class="slider"></span>
+         </label>
+         <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="index.html">Certifications</a>
+         </div>
+      </div>
+      <div class="container">
+         <div class="left-section">
+            <h1>Ravikishore Malireddi</h1>
+            <h2>Senior Java Developer</h2>
+            <div class="contact-info">
+               <h2>Contact</h2>
+               <p><strong>Email:</strong> <a href="mailto:ravikish9835@gmail.com">ravikish9835@gmail.com</a></p>
+               <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ravi-kishore9835/" target="_blank">LinkedIn Profile</a></p>
+               <p><strong>GitHub:</strong> <a href="https://github.com/ravikish" target="_blank">GitHub Profile</a></p>
+            </div>
+         </div>
+         <div class="right-section">
+            <div class="open-to-work">Open to Work</div>
+            <img src="profile.jpg" alt="Profile Picture of Ravikishore M" class="profile-pic">
+         </div>
+      </div>
+      <div class="container">
+         <div class="left-section">
+            <div class="section">
+               <h2>Summary</h2>
+               <p>Full Stack Developer with around 5.5 years of experience in all stages of the Software Development Life Cycle (SDLC). Proficient in Agile, Lean, and Extreme Programming methodologies, including paired programming and test-driven development (TDD). Expertise in microservice architecture, continuous integration (CI/CD), and daily deployments. Skilled in developing and deploying applications on cloud platforms with zero downtime using blue-green deployment strategies</p>
+            </div>
+            <div class="section">
+               <h2>Technical Skills</h2>
+               <p><strong>Programming Languages:</strong> Java, Python, MATLAB, JavaScript</p>
+               <p><strong>Frameworks:</strong> Spring MVC, Spring Boot, Spring Security, Hibernate, Struts</p>
+               <p><strong>Microservices:</strong> Spring Boot, RESTful APIs, JAX-RS</p>
+               <p><strong>CI/CD Tools:</strong> Jenkins, Bamboo, Maven, Ant, Gradle</p>
+               <p><strong>Cloud Platforms:</strong> Pivotal Cloud Foundry, Google Cloud Platform (GCP), AWS, Azure</p>
+               <p><strong>Database Management:</strong> H2, Liquibase, Oracle, MySQL, PostgreSQL, MongoDB</p>
+               <p><strong>Authentication & Security:</strong> OAuth, ADFS, LDAP, HIPAA and PII data handling, encryption</p>
+               <p><strong>Front-End Technologies:</strong> HTML5, CSS3, JavaScript, ReactJS, AngularJS, Bootstrap</p>
+               <p><strong>Containerization:</strong> Docker, Kubernetes</p>
+               <p><strong>Version Control:</strong> Git, Bitbucket</p>
+               <p><strong>Project Management Tools:</strong> JIRA, Rally</p>
+               <p><strong>Testing Tools:</strong> JUnit, Selenium, Mockito, Cucumber, TestNG</p>
+               <p><strong>Deployment & Monitoring:</strong> Apache Tomcat, WebSphere, Log4j, ELK Stack</p>
+            </div>
+            <div class="section">
+               <h2>Professional Experience</h2>
+               <h3>Fiat Chrysler Automobile (TCS) – Hyderabad, India [August 2022 – May 2024]</h3>
+               <p><strong>Senior Java Full Stack Developer - Boosted Chrysler's Sales Through FIAT USA's Incentive Program with Microservices</strong></p>
+               <ul>
+                  <li>Supported the implementation of a comprehensive vehicle incentive program for FIAT USA by assisting in the development of microservices using Spring Boot to streamline the vehicle creation process.</li>
+                  <li>Collaborated with the team to coordinate the creation of tactics and offers, integrating multiple tactics to generate effective offers, which contributed to a significant 22% increase in Chrysler's sales over two years.</li>
+                  <li>Assisted in developing microservices for competitive data collection from multiple dealers, aiding in demand identification.</li>
+                  <li>Supported high test coverage efforts by utilizing Mockito and contributed to the development of a dashboard to monitor and analyze sales data.</li>
+                  <li>Participated in Agile Scrum practices, including paired programming and test-driven development (TDD).</li>
+                  <li>Contributed to the creation of reusable modules and custom directives in React and supported the development of the UI using React JS.</li>
+                  <li>Provided support in utilizing core Java concepts like multithreading, collections framework, file I/O, and concurrency.</li>
+                  <li>Assisted in leveraging Java 8 features, including Lambda expressions, and supported the development of microservices with Spring Boot.</li>
+                  <li>Provided support in utilizing Spring Core annotations for dependency injection and assisted in the development of REST APIs and the deployment of applications on AWS using S3, EC2, Lambda, and CloudFront.</li>
+                  <li>Contributed to the deployment of applications in CI/CD environments using Bamboo and Stash, and supported the configuration of Apache Kafka for workload management.</li>
+                  <li>Helped in managing large data sets using MongoDB and supported logging/debugging efforts using Log4j.</li>
+                  <li>Used JIRA for issue tracking and work assignment and supported version control implementation using GIT.</li>
+                  <li>Despite being on sabbatical leave, I made every effort to support this project, contributing to key deliverables and ensuring project continuity.</li>
+               </ul>
+               <p><strong>Environment:</strong> Java/J2EE, Spring MVC, Spring JMS, Spring JDBC, Spring Batch, SOAP Web Services, HTML5, CSS3, ReactJS, IBM WebSphere MQ, WebLogic 12.1.1, XML, Apache JMeter, SQL Server 2012, Maven, Liquibase, SoapUI, TFS, WinSCP, Eclipse 3.8, UNIX.</p>
+               <h3>Ericsson – TCS, Hyderabad, India [Dec 2020 – July 2022]</h3>
+               <p><strong>Java Full Stack Developer - Optimized 4G/5G RAN integration for Ericsson OSS using Camunda, deployed for AT&T and Verizon.</strong></p>
+               <ul>
+                  <li>Responsible for Ericsson OSS system (ENM), orchestrated development of auto integration solution for 4G and 5G RAN nodes, globally deployed to Tier I clients AT&T and Verizon, adhering to industry standards.</li>
+                  <li>Actively contributed to requirement studies, shaping software cycles with insightful contributions aligned with industry best practices.</li>
+                  <li>Executed design and implementation of unit and automated test cases using cutting-edge tools (JUnit, Docker, Arquillian, TAF), ensuring adherence to ATS (Automated Testing Standards) for comprehensive quality assurance.</li>
+                  <li>Employed Camunda to optimize workflow efficiency, streamlining job flows and enhancing productivity.</li>
+                  <li>Streamlined the Node-Up process in LTE nodes by integrating it into Camunda workflow management system and making necessary modifications in CORBA, enhancing the efficiency and reliability of the deployment process.</li>
+                  <li>Designed and developed REST based Web service calls using Jax-RS.</li>
+                  <li>Designed and developed SOAP web service to provide data to other systems.</li>
+                  <li>Provided spring based RESTful Web service.</li>
+                  <li>Experience on implementing the Angular JS in creating animations based on CSS classes.</li>
+                  <li>Used routing feature of Angular JS for Single page application (SPA).</li>
+                  <li>Used AJAX and JSON to make asynchronous calls to the project server to fetch data on the fly.</li>
+                  <li>Participated in wireframe reviews with UX team to understand the requirements.</li>
+                  <li>Used GIT for version control.</li>
+                  <li>Worked on Implementing the JavaScript/JQuery frameworks such as Angular JS for MVW/MVC framework.</li>
+                  <li>Used Microservices architecture to break down the monolithic application to independent components.</li>
+                  <li>Used Maven for Project management and build automation.</li>
+                  <li>Experience in AWS S3, EC2, Lambda, and CloudFront.</li>
+                  <li>Followed Agile & Scrum Methodology for development of the applications.</li>
+                  <li>Implemented test scripts to support test driven development and continuous integration.</li>
+               </ul>
+               <p><strong>Environment:</strong> Java/J2EE, Spring MVC, Spring JMS, Spring JDBC, Spring Batch, SOAP Web Services, HTML5, CSS3, JavaScript, Angular JS, Camunda, IBM WebSphere MQ, WebLogic 12.1.1, XML, Apache JMeter, SQL Server 2012, Maven, Liquibase, SoapUI, TFS, WinSCP, Eclipse 3.8, UNIX.</p>
+               <h3>Metlife – TCS, Hyderabad, India [June 2019 -Nov 2020]</h3>
+               <p><strong>Java Developer - Developed MetLife's microservices-based Employers Application, optimizing claim processing with Azure Batch Services.</strong></p>
+               <ul>
+                  <li>Collaborated with MetLife to develop a microservices-based Employers Application using Java, MongoDB, and Git.</li>
+                  <li>Worked with the MetLife team to gather requirements and design the application architecture.</li>
+                  <li>Developed and tested the microservices and deployed them to production.</li>
+                  <li>Re-engineered batch processing for claim data using Azure Batch Services and Node.js. Optimized performance, reduced processing time, and improved data accuracy.</li>
+                  <li>Integrated automation tests into the CI/CD pipeline using Git and Azure DevOps, achieving faster and more reliable deployments.</li>
+                  <li>Implemented Salesforce Apex to integrate the application with MetLife's CRM, enabling seamless data flow between the Employers Application and Salesforce.</li>
+               </ul>
+               <p><strong>Environment:</strong> Java, Node.js, SQL, MSSQL, MongoDB, Microsoft Azure, Terraform, Docker, React, Git, Adobe Experience Cloud, Salesforce Apex.</p>
+               <h3>Tata Consultancy Services, Mumbai [Jan 2019 – May 2019]</h3>
+               <p><strong>Software Intern - Automation Tool for Migration to Hadoop Spark</strong></p>
+               <ul>
+                  <li>Utilized Java and Spring Boot to build a robust standalone application capable of handling large-scale file processing.</li>
+                  <li>Implemented Regex for efficient text parsing and highlighting of SQL keywords to ensure accuracy during migration.</li>
+                  <li>Managed large Multipart files and ensured seamless import and processing within the application.</li>
+                  <li>Designed and implemented asynchronous processes to improve the performance and responsiveness of the tool.</li>
+                  <li>Focused on comprehensive error handling to manage exceptions and ensure smooth operation during the migration process.</li>
+               </ul>
+               <p><strong>Environment:</strong> Java, Spring Boot, Regex, File Handling, Multipart File Importing, Asynchronous Processing, SQL Keyword Highlighting, Error Handling.</p>
+            </div>
+            <div class="section">
+               <h2>Education</h2>
+               <p><strong>Masters in Computer Science</strong></p>
+               <p>The University of Texas at Arlington | [Aug 2022 – May 2024]</p>
+               <p>(On Sabbatical for education)</p>
+            </div>
+         </div>
+      </div>
+      <script>
+         function toggleTheme() {
+             document.body.classList.toggle('light-theme');
+         }
+      </script>
+   </body>
+</html>
